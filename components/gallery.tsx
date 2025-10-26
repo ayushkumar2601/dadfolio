@@ -13,10 +13,10 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   { id: 1, title: "Drivers Training", category: "Workshop", image: "/w1.jpg" },
   { id: 2, title: "Customers Training", category: "Workshop", image: "/w2.jpg" },
-  { id: 3, title: "Parts Training", category: "Training", image: "/w3.jpg" },
+  { id: 3, title: "Technician Training", category: "Training", image: "/w3.jpg" },
   { id: 4, title: "OffRoad Training", category: "Training", image: "/w5.jpg" },
-  { id: 5, title: "Technician Training", category: "Training", image: "/w4.jpg" },
-  { id: 6, title: "Army Training", category: "Workshop", image: "/engineering-team-collaboration-workshop.jpg" },
+  { id: 5, title: "Army Training", category: "Training", image: "/w10.jpg" },
+  { id: 6, title: "Defence Training", category: "Workshop", image: "/w12.jpg" },
 ]
 
 export default function Gallery() {

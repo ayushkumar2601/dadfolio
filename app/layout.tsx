@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Ajay - Automobile Engineer",
   description:
     "Portfolio of Ajay, an innovative Automobile Engineer specializing in hydrogen vehicles and advanced diesel engines.",
-  generator: "v0.app",
+  generator: "ayushkumar",
 }
 
 export default function RootLayout({
