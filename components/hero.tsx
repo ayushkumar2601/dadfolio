@@ -52,7 +52,7 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl text-muted-foreground mb-4 font-light">Automobile Engineer</p>
 
           <p className="text-lg sm:text-xl text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Passionate about innovation and engineering excellence. Specializing in hydrogen vehicles and advanced
+            Passionate about innovation and engineering excellence. Specializing in LNG vehicles and advanced
             diesel engine technologies for a sustainable automotive future.
           </p>
 
