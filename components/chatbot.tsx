@@ -18,7 +18,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
-      text: "👋 Hey there! I'm your Gemini-powered assistant. How can I help today?",
+      text: "👋 Hey there! I'm your turbo-powered assistant. How can I help today?",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -91,7 +91,7 @@ export default function Chatbot() {
       {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-accent hover:bg-red-500 text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
       >
         {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
       </button>
@@ -100,11 +100,11 @@ export default function Chatbot() {
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-40 w-96 max-w-[calc(100vw-24px)] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200 animate-fade-in-up">
           {/* Header */}
-          <div className="bg-indigo-600 text-white p-4 rounded-t-2xl flex items-center justify-between">
-            <h3 className="font-semibold text-lg">Gemini Assistant</h3>
+          <div className="bg-accent text-white p-4 rounded-t-2xl flex items-center justify-between">
+            <h3 className="font-semibold text-lg">Ajay's Assistant</h3>
             <button
               onClick={() => setIsOpen(false)}
-              className="hover:bg-indigo-500 p-1 rounded"
+              className="hover:bg-red-500 p-1 rounded"
             >
               <X size={20} />
             </button>
@@ -122,7 +122,7 @@ export default function Chatbot() {
                 <div
                   className={`max-w-xs px-4 py-2 rounded-lg ${
                     message.sender === "user"
-                      ? "bg-indigo-600 text-white rounded-br-none"
+                      ? "bg-accent text-white rounded-br-none"
                       : "bg-gray-200 text-gray-900 rounded-bl-none"
                   }`}
                 >
@@ -162,14 +162,14 @@ export default function Chatbot() {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
-              placeholder="Ask Gemini anything..."
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+              placeholder="Ask Me anything..."
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-sm"
               disabled={isLoading}
             />
             <button
               onClick={handleSendMessage}
               disabled={isLoading || !inputValue.trim()}
-              className="bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 text-white p-2 rounded-lg"
+              className="bg-accent hover:bg-red-500 disabled:bg-gray-300 text-white p-2 rounded-lg"
             >
               <Send size={18} />
             </button>

@@ -18,7 +18,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
     { label: "Research", href: "#research" },
     { label: "Certifications", href: "#certifications" },
     { label: "Tools", href: "#tools" },
-    { label: "Blog", href: "#blog" },
+    // { label: "Blog", href: "#blog" },
     { label: "Contact", href: "#contact" },
   ]
 
@@ -36,7 +36,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="#home" className="text-2xl font-bold text-foreground hover:text-accent transition-colors">
-            Ajay
+            Ajay Kumar
           </Link>
 
           {/* Desktop Navigation */}

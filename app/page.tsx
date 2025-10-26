@@ -59,7 +59,7 @@ export default function Home() {
       <Certifications />
       <Tools />
       <Gallery />
-      <Blog />
+      {/* <Blog /> */}
       <ResumeCTA />
       <Contact />
       <BackToTop />

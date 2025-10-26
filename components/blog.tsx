@@ -47,26 +47,28 @@ export default function Blog() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (!sectionRef.current) return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = Number.parseInt(entry.target.getAttribute("data-id") || "0")
+            const id = Number(entry.target.getAttribute("data-id") || "0")
             setVisibleItems((prev) => [...new Set([...prev, id])])
           }
         })
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
 
-    const items = sectionRef.current?.querySelectorAll("[data-id]")
-    items?.forEach((item) => observer.observe(item))
+    const items = sectionRef.current.querySelectorAll("[data-id]")
+    items.forEach((item) => observer.observe(item))
 
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section id="blog" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="blog" ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
@@ -83,10 +85,10 @@ export default function Blog() {
             <div
               key={post.id}
               data-id={post.id}
-              className={`group p-6 bg-card border border-border rounded-xl hover:border-accent/50 hover:shadow-lg transition-all duration-500 flex flex-col ${
+              className={`group p-6 bg-card border border-border rounded-xl flex flex-col transition-all duration-700 ${
                 visibleItems.includes(post.id) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
-              style={{ transitionDelay: `${index * 50}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">

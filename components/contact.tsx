@@ -28,21 +28,21 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:ayush@example.com",
+      href: "mailto:kumar.ajay@cummins.com",
       color: "hover:text-accent",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/ajay-kumar-786424124/",
       color: "hover:text-accent",
     },
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-accent",
-    },
+    // {
+    //   icon: Github,
+    //   label: "GitHub",
+    //   href: "https://github.com",
+    //   color: "hover:text-accent",
+    // },
   ]
 
   return (
@@ -81,17 +81,20 @@ export default function Contact() {
 
           {/* Email CTA */}
           <a
-            href="mailto:ayush@example.com"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
-          >
-            Send me an email
-            <ExternalLink size={20} />
-          </a>
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=kumar.ajay@cummins.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+>
+  Send me an email
+  <ExternalLink size={20} />
+</a>
         </div>
 
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>© 2025 Ayush. All rights reserved.</p>
+          <p>© 2025 Ajay Kumar. All rights reserved.</p>
+          <p>kumar.ajay@cummins.com</p>
         </div>
       </div>
     </section>

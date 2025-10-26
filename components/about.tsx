@@ -57,7 +57,7 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl overflow-hidden">
               <img
-                src="/automobile-engineer-working-on-engine.jpg"
+                src="/pp2.png"
                 alt="Ayush - Automobile Engineer"
                 className="w-full h-full object-cover"
               />
