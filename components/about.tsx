@@ -69,7 +69,7 @@ export default function About() {
           <div>
             <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
               I'm an Automobile Engineer with a passion for sustainable transportation and cutting-edge vehicle
-              technologies. My work focuses on developing innovative solutions in hydrogen fuel cells and advanced
+              technologies. My work focuses on developing innovative solutions in LNG Engines and advanced
               diesel engine systems.
             </p>
 
